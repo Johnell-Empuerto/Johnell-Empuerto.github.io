@@ -1,0 +1,96 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    margin: 10px;
+}
+
+body{
+    background-image: url(spencer-lbqLxgvLt0U-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.overlay{
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: rgba(26, 111, 238, 0.356);
+}
+
+.question{
+    border: 1px solid whitesmoke;
+    padding: 20px;
+    border-radius: 5px;
+    width: 210px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    position: relative;
+    top: 450px;
+    transition: .5s;
+}
+.question:hover{
+    background-color: whitesmoke;
+    color: black;
+}
+
+.modal-box{
+    background-color: whitesmoke;
+    padding: 20px;
+    width: 150px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 7px;
+    font-size: 18px;
+    position: relative;
+    left: 650px;
+    transform: translateY(200px);
+    display: none;
+
+    animation-name: modal-animate;
+    animation-duration: .4s;
+}
+
+@media (max-width: 836px){
+    .modal-box{
+        left: 300px;
+       
+    }
+}
+
+@media (max-width: 485px){
+    .modal-box{
+        left: 150px;
+       
+    }
+}
+
+.modal-box .btn{
+    padding: 3px 10px;
+}
+
+
+@keyframes modal-animate{
+    from{
+        top: -300px;
+        opacity: 0;
+    }
+
+    to{
+        top: 50%;
+        opacity: 1;
+    }
+}
